@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timetable generator</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" style="font-size: 30px;"><strong><span class="text-info"
+          style="font-size:1.5rem;">py</span>Timetables</strong></a>
+    </nav>
+    <article class="index-form p-5">
+        <div class="container center">
+            <div class="row align-items-center">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form id="forms">
+
+                        <!-- Add number of teachers -->
+                        <div class="form-group" id="teachers">
+                            <div class="col-sm-10 hidden">
+                                <label for="teachersnumber" class="col-sm-10 col-form-label">Number of Classes:</label>
+                                <input type="number" class="form-control" id="teachers2" min="1" max="10">
+                            </div>
+                        </div>
+
+                        <!-- Teachers names and Ids -->
+                        <div id="teacherInput"> </div>
+
+                        <!-- Add number of subjects -->
+                        <div class="form-group" id="subjects">
+                            <div class="col-sm-10 hidden">
+                                <label for="NumberofSubjects" class="col-sm-10 col-form-label">Number of subjects:</label>
+                                <input type="number" class="form-control" id="subjects2" min="1" max="10">
+                            </div>
+                        </div>
+
+                        <!-- Subjects names and Ids -->
+                        <div id="numberOfSubjects"> </div>
+
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-block btn-outline-dark btn-lg" id="next">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="submitForm" style="display:none">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-block btn-outline-dark btn-lg" id="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Create timetable -->
+    <div class="container">
+        <button class="btn btn-outline-success btn-lg" onclick="printTable()" id="print">Print Timetable</button>
+        <div id="append">
+            <div class="table-responsive" style="display:none">
+                <h3>Class: 1</h3>
+                <div id="printableTable">
+                    <table class="table" border="1">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">8:00-9:00</th>
+                                <th scope="col">9:00-10:00</th>
+                                <th scope="col">10:00-11:00</th>
+                                <th scope="col">11:00-12:00</th>
+                                <th scope="col">12:00-1:00</th>
+                                <th scope="col">1:00-2:00</th>
+                                <th scope="col">2:00-3:00</th>
+                                <th scope="col">3:00-4:00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">MONDAY</th>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="table-primary" rowspan="5" style="text-align:center">L<br><br>U<br><br>N<br><br>C<br><br>H
+                                </td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TUESDAY</th>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">WEDNESDAY</th>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">THURSDAY</th>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">FRIDAY</th>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                                <td class="td"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <input type="reset" style="display:none;" id="reset" class="btn btn-outline-danger btn-lg" value="Reset" onClick="document.location.reload(true)">
+
+    </div>
+
+    <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+
+
+
+
+</body>
+
+</html>
