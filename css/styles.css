@@ -1,0 +1,95 @@
+.images {
+    background-image: url(../assets2/dd[1].png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 60px;
+    padding-top: 5%;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* } 
+body{
+    font-family: 'Montserrat', sans-serif;
+} */
+
+#contact {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 3%;
+}
+
+footer {
+    background-color: blanchedalmond;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: blue;
+}
+
+
+/* a{
+    font-size: 8rem;
+} */
+
+li {
+    list-style: none;
+    background-color: rgba(153, 255, 255, 0.2);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height: 90px;
+    border-style: 1px solid teal;
+    margin: 6px;
+    width: 150px;
+    text-align: center;
+}
+
+a {
+    color: rgba(102, 102, 102, 0.2);
+}
+
+nav {
+    position: fixed;
+}
